@@ -1,0 +1,60 @@
+/***************************
+Andrew Barber
+09/02/2004
+Translator App, CSS File
+***************************/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #6e0000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-top: 1px;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+    height: 100px;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #f4f4f4;
+}
+
+p {
+    color: #f4f4f4;
+    background-color: gray;
+    font-family: 'Lucida Sans';
+    text-align: center;
+}

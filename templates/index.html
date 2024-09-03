@@ -1,0 +1,39 @@
+<!--Andrew Barber            -->
+<!--09/02/2024               -->
+<!--Translator App, HTML File-->
+<!--------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translator</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <!--Type Text-->
+            <textarea name="text" placeholder="Enter text to translate"></textarea>
+            <br>
+            <!--File Upload-->
+            <label for="file">Or upload an image file:</label>
+            <input type="file" name="file" accept=".png,.jpg,.jpeg,.gif">
+            <br>
+            <select name="language" required>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+            </select>
+            <br>
+            <button type="submit">Translate</button>
+        </form>
+        <!--Display Translated Text-->
+        {% if translated_text %}
+            <h2>Translated Text</h2>
+            <p>{{ translated_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
